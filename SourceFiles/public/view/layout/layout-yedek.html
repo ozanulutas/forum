@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+
+        .container {
+            max-width: 1200px;/**/
+            min-height: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-rows: auto  auto auto 1fr;
+            grid-template-columns: 100%;
+            grid-template-areas:
+                "header"
+                "nav"
+                "side-nav"
+                "content"
+                "footer" ;
+        }
+        
+        .header {
+            background-color: coral;
+            text-align: center;
+            grid-area: header;
+            
+        }
+
+        .nav {
+            background-color: darkseagreen;
+            grid-area: nav;
+            text-align: center;
+        }
+        
+        .side-nav {
+            background-color: darkviolet;
+            /*grid-area: 3/2/4/2 ;*/ 
+        }
+
+        .main {
+            background-color: cornflowerblue;
+            grid-area: content;/**/
+            font-size: clamp(3rem, calc(5vw + 1rem));
+        }
+
+        .category {
+            background-color: darkkhaki;
+            margin: 1%;
+            padding: 1%;
+        }
+
+        .forum h3 {
+            background-color: darkmagenta;
+            margin: 0px;
+        }
+
+        .sub-forum {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .sub-forum h4 {
+            margin: 0px 1% 2% 0px;
+            background-color: darkorange;         
+
+        }
+        
+        .footer {
+            background-color: chocolate;
+            text-align: center;       
+            grid-area: footer;          
+        }
+
+
+        @media(min-width: 600px) {}
+        @media(min-width: 768px) {}
+        @media(min-width: 992px) {
+            .container {
+                grid-template-rows: auto  auto 1fr auto ;
+                grid-template-columns: 1fr 5fr;
+                grid-template-areas:
+                    "header header"
+                    "nav nav"
+                    "side-nav content"
+                    "footer footer" ;
+            }
+        }
+        /*@media(min-width: 1200px) {
+            .container {max-width: 1200px;}
+        }*/
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <h1>HEADER</h1>
+        </header>
+        <!-- NAV -->
+        <nav class="nav">
+            <h2>NAV</h2>
+        </nav>
+        <!-- SIDE-NAV -->
+        <nav class="side-nav">
+            <h3>SIDE-NAV</h3>
+        </nav>
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <article class="categories">  
+                <h1>KATEGORİLER</h1>
+
+                <section class="category">
+                    
+                    <h2>Kategori-Başlığı-1</h2>
+                    <section class="forum">
+                        <h3>Forum-1</h3>
+                        <p>Açıklama...</p>
+                        <section class="sub-forum">
+                            <h4>Alt-Forum1</h4>
+                            <h4>Alt-Forum2</h4>
+                            <h4>Alt-Forum3</h4>
+                            <h4>Alt-Forum1</h4>
+                            <h4>Alt-Forum2</h4>
+                            <h4>Alt-Forum3</h4>
+                            <h4>Alt-Forum1</h4>
+                            <h4>Alt-Forum2</h4>
+                            <h4>Alt-Forum3</h4>
+                        </section>
+                    </section>
+
+                    <section class="forum">
+                        <h3>Forum-2</h3>
+                        <p>Açıklama...</p>
+                        <section class="sub-forum">
+                            <h4>Alt-Forum1</h4>
+                            <h4>Alt-Forum2</h4>
+                            <h4>Alt-Forum3</h4>
+                        </section>
+                    </section>
+
+                    <section class="forum">
+                        <h3>Forum-3</h3>
+                        <p>Açıklama...</p>
+                        <section class="sub-forum">
+
+                        </section>
+                    </section>
+
+                </section>
+                
+                <section class="category">
+                    
+                    <h2>Kategori-Başlığı-1</h2>
+                    <section class="forum">
+                        <h3>Forum-1</h3>
+                        <p>Açıklama...</p>
+                        <section class="sub-forum">
+                            <h4>Alt-Forum1</h4>
+                            <h4>Alt-Forum2</h4>
+                            <h4>Alt-Forum3</h4>
+                        </section>
+                    </section>
+
+                    <section class="forum">
+                        <h3>Forum-2</h3>
+                        <p>Açıklama...</p>
+                        <section class="sub-forum">
+                            <h4>Alt-Forum1</h4>
+                            <h4>Alt-Forum2</h4>
+                            <h4>Alt-Forum3</h4>
+                        </section>
+                    </section>
+
+                    <section class="forum">
+                        <h3>Forum-3</h3>
+                        <p>Açıklama...</p>
+                        <section class="sub-forum">
+                                                        
+                        </section>
+                    </section>
+
+                </section>
+
+            </article>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <h2>FOOTER</h2>
+        </footer>
+    </div>
+    
+</body>
+</html>
